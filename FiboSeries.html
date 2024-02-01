@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FiboSeries</title>
+</head>
+
+<body>
+    <script>
+        function fibGenerator(N) {
+            if (N > 0) {
+                const fiboSeries = [0, 1]
+                for (let i = 2; i < N; i++) {
+                    const nextFibo = fiboSeries[i - 1] + fiboSeries[i - 2];
+                    fiboSeries.push(nextFibo);
+
+                }
+                return fiboSeries
+            }
+            return [];
+        };
+        console.log(fibGenerator(5))
+
+    </script>
+
+</body>
+
+</html>
