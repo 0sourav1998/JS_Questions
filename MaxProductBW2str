@@ -1,0 +1,20 @@
+function myFn(words){
+    function myFn2(word1,word2){
+        for(let char of word1){
+            if(word2.includes(char)){
+                return true ;
+            }
+        }
+        return false ;
+    }
+    let product = 0 ;
+    for(let i = 0 ; i<words.length ; i++){
+        for(let j= i+1 ; j<words.length ; j++){
+          if(!myFn2(words[i],words[j])){
+              product = Math.max(product,words[i].length*words[j].length)
+          }   
+        }
+    }
+    return product ;
+}
+console.log(myFn(["abcw","baz","foo","bar","xtfn","abcdef"]))
