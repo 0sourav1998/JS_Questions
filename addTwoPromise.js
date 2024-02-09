@@ -13,4 +13,4 @@ const promise2 = new Promise((resolve)=>{
 Promise.all([promise1,promise2]).then((result)=>{
     const sum = result.reduce((total,num)=>total+num,0)
     console.log(sum) ;
-}).catch(()=>console.log('Error Detected'))
+}).catch(()=>console.log('Error Detected')) ;
